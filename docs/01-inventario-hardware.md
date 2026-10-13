@@ -2,7 +2,7 @@
 
 ## Contexto de la observacion
 
-- Fecha y sistema utilizado: PENDIENTE.
+- Fecha y sistema utilizado: 6/10 Linux
 - Modalidad, equipo anfitrion y VM VirtualBox si procede: PENDIENTE.
 - Version de Proxmox prevista: PENDIENTE.
 
@@ -10,10 +10,10 @@
 
 | Area | Dato observado y evidencia | Especificacion y fuente | Limite o diferencia | Justificacion |
 |---|---|---|---|---|
-| CPU | | | | |
-| RAM | | | | |
-| Almacenamiento | | | | |
-| Red | | | | |
+| CPU | CPU: Intel Pentium G4560 3.50 GHz, Nucleos/Hilos: 2/2, Arquitectura: 86/64, Virtualizacion: VT-x| | | |
+| RAM | CRUCIAL DDR4 4096MB 2400MHz x2 | | | |
+| Almacenamiento | THOSHIBA DT01ACA050 500 GB | | | |
+| Red | RTL8111 eth0 1Gbit/s | | | |
 | Plataforma | | | | |
 
 ## 1. Puedo instalar Proxmox en este equipo?
