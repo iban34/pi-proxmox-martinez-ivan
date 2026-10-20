@@ -24,6 +24,16 @@ las evidencias utiles; evita frases generales como "he trabajado en Proxmox".
 - Incidencias y solucion o estado pendiente: Ningun problema.
 - Siguiente paso: el siguiente paso es empezar a preparar proxmox en VirtualBox
 
+## Sesion 03 - 20/10
+
+- Objetivo: Diseñar la estructura y diagrama de red.
+- Acciones realizadas: Markdown rellenado con todos los elementos (VirtualBox, VM/Proxmox) con IPs y descripciones breves.
+- Decisiones y motivos: He actuado mas libremente en cuanto a representar la informacion en el markdown, me ha parecido mas comodo de esta manera.
+- Pruebas y resultados: He utilizado la informacion de la web del projecto (Taller Proxmox y Conocer Proxmox)
+- Documentos o evidencias: [Diagrama Red](02-diagrama-red.md).
+- Incidencias y solucion o estado pendiente: Ningun problema.
+- Siguiente paso: Lo sigueinte es empezar con la instalacion de proxmox en virtualbox.
+
 Anadir una entrada con esta estructura en cada sesion. El historial de
 GitHub registra los commits; no hace falta incluir el hash del propio
 commit dentro de su entrada de bitacora.
