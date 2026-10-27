@@ -34,8 +34,20 @@ las evidencias utiles; evita frases generales como "he trabajado en Proxmox".
 - Incidencias y solucion o estado pendiente: Ningun problema.
 - Siguiente paso: Lo sigueinte es empezar con la instalacion de proxmox en virtualbox.
 
+## Sesion 04 - 27/10
+
+- Objetivo: Crear e instalar maquina proxmox y comprobarcion en navegador
+- Acciones realizadas: Maquina creara y configurada y proxmox instalado y comprobado con capturas en evidencias.
+- Decisiones y motivos: He configurado la maquina antes de inciar la instalacion para que no de errores.
+- Pruebas y resultados: He ido tirando a base de prueba y error probando todo lo evidente, direcciones IP, adaptador mal configurado y red Host-Only creada.
+- Documentos o evidencias: [Instalacion Proxmox](03-instalacion-proxmox.md).
+- Incidencias y solucion o estado pendiente: El primer problema a sido que he descargado mal la ISO, me he descargado para ARM64, aparte de eso ningun problema a destacar.
+- Siguiente paso: Lo sigueinte sera confgurar y crear las maquinas cli-linux y server-aso dentro de proxmox.
+
 Anadir una entrada con esta estructura en cada sesion. El historial de
 GitHub registra los commits; no hace falta incluir el hash del propio
 commit dentro de su entrada de bitacora.
+
+
 
 [Volver al indice](../README.md)
