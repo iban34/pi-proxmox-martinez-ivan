@@ -44,6 +44,17 @@ las evidencias utiles; evita frases generales como "he trabajado en Proxmox".
 - Incidencias y solucion o estado pendiente: El primer problema a sido que he descargado mal la ISO, me he descargado para ARM64, aparte de eso ningun problema a destacar.
 - Siguiente paso: Lo sigueinte sera confgurar y crear las maquinas cli-linux y server-aso dentro de proxmox.
 
+## Sesion 05 - 10/11
+
+- Objetivo: Volver a crear maquina proxmox con nueva configuracion.
+- Acciones realizadas: Maquina creada, configurada y proxmox instalado, configurado y listo para crear maquinas srv-aso y cli-linux.
+- Decisiones y motivos: He decidido utilizar 2 nucleos de CPU, 6 GB de RAM y 80 de almacenamiento dinamico.
+- Pruebas y resultados: He probado a acceder desde el navegador con la IP de administracion cambiada y funciona correctamente.
+- Documentos o evidencias: [Instalacion Proxmox](03-instalacion-proxmox.md).
+- Incidencias y solucion o estado pendiente: Ninguno
+- Siguiente paso: Lo sigueinte sera configurar y crear las maquinas cli-linux y server-aso dentro de proxmox.
+
+
 Anadir una entrada con esta estructura en cada sesion. El historial de
 GitHub registra los commits; no hace falta incluir el hash del propio
 commit dentro de su entrada de bitacora.
