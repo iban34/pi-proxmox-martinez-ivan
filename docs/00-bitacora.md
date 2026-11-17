@@ -54,6 +54,16 @@ las evidencias utiles; evita frases generales como "he trabajado en Proxmox".
 - Incidencias y solucion o estado pendiente: Ninguno
 - Siguiente paso: Lo sigueinte sera configurar y crear las maquinas cli-linux y server-aso dentro de proxmox.
 
+## Sesion 06 - 17/11
+
+- Objetivo: Completar el punto 3 y 4, Terminar de configurar Proxmox, comprobar y registrar informacion como el almacenamiento, los recursos disponibles y el funcionamiento de red.
+- Acciones realizadas: Registrar informacion relevante: almacenamiento recursos y configuracion de red.
+- Decisiones y motivos: Tendre que subir los nucleos a 4 para repartir los recursos de la maquina.
+- Pruebas y resultados: Toda la informacion este guardarda y registrada en [Instalacion Proxmox](03-instalacion-proxmox.md)
+- Documentos o evidencias: [Instalacion Proxmox](03-instalacion-proxmox.md).
+- Incidencias y solucion o estado pendiente: Ninguno
+- Siguiente paso: Crear plantillas para contenedores.
+
 
 Anadir una entrada con esta estructura en cada sesion. El historial de
 GitHub registra los commits; no hace falta incluir el hash del propio
