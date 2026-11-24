@@ -62,7 +62,17 @@ las evidencias utiles; evita frases generales como "he trabajado en Proxmox".
 - Pruebas y resultados: Toda la informacion este guardarda y registrada en [Instalacion Proxmox](03-instalacion-proxmox.md)
 - Documentos o evidencias: [Instalacion Proxmox](03-instalacion-proxmox.md).
 - Incidencias y solucion o estado pendiente: Ninguno
-- Siguiente paso: Crear plantillas para contenedores.
+- Siguiente paso: Crear usuarios y permisos
+
+## Sesion 07 - 24/11
+
+- Objetivo: Cread usuario de prueba de permisos y comprobar funcionamiento.
+- Acciones realizadas: Hemos creado un usuario que solo tiene permsios de lectura y se han hecho varias pruebas con la opcion de propagar, en entorno grafico y en terminal.
+- Decisiones y motivos: He creado un usuario y solo le he asigando permisos de lectura como prueba de esta forma solo ve el nodo.
+- Pruebas y resultados: He probado con la opcion Propagar y sin ella.
+- Documentos o evidencias: [Instalacion Proxmox](03-instalacion-proxmox.md)
+- Incidencias y solucion o estado pendiente:
+- Siguiente paso: Terminar fase 4.
 
 
 Anadir una entrada con esta estructura en cada sesion. El historial de

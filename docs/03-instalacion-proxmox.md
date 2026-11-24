@@ -4,7 +4,7 @@
 Configurar maquina virtual en Virtualbox (adaptadores, red Host-Only, virtualizacion anidada, KVM), instalar proxmox y configuracion de interfaces dentro de proxmox.
 
 ## Procedimiento
- - Punto 3
+ - Punto 1
 
 Descargar ISO de proxmox, crear VM sin el instalador y configurar VM de la siguiente manera:
     - 6 GB de RAM
@@ -49,7 +49,7 @@ source /etc/network/interfaces.d/*
 
 Una vez hecho esto se puede hacerder a proxmox deste la maquina externa con la ip 192.168.56.10.
 
-- Punto 4
+- Punto 2
 
 Al ver los almacenamientos disponibles en promox se pueden distinguir 2:
     - Local, carpeta dentro de la maquina donde se puede guardar todo tipo de archivos.
@@ -65,6 +65,71 @@ Al ver los almacenamientos disponibles en promox se pueden distinguir 2:
 | Margen de operacion | 0 | 0 +- | 20 GB | |
 
 Por el momento solo existe el usuario root el cual tiene acceso a todo.
+
+- Punto 3
+
+Ahora es el momento de crear un usuario en proxmox con permisos limitados.
+
+| Cuenta | Donde se utiliza | Rol y Permisos | Ambito | Para que las necesitas |
+|---|---|---|---|---|
+| root | Panel de Proxmox | Administración completa | Instalación de Proxmox | Preparación y recuperación del nodo |
+| invitado | Panel de Proxmox | Solo permisos de lectura del | nodo | /nodes/pve-martinez | Usuario de prueba de permisos |
+
+- Para crear el primer usuario primero vamos a:
+
+Datacenter-Permissions-Users-Add
+
+Nombre: ejemplo1-lectura
+Importante ponerle la opcion PVE Proxmox para que solo funcione dentro de proxmox.
+Asigar una contraseña
+
+(Captura en evidencias 3-3.1 Usuario creado con etorno grafico.png)
+
+Este usuario tiene los permisos estandar, para asignarle permisos solo de lectura que creara un rol con los permisos necesarios.
+
+- Para crear este rol vamos a:
+
+Datacenter-Permissions-Roles-Create
+
+Nombre: aulalectura
+El unico que permiso necesario para la lectura del nodo es Sys.Audit
+
+(Captura en evidencias 3-3.2 Rol creado con entorno grafico.png)
+
+Para asignar el rol al usuario vamos a:
+
+Datacenter-Permissions-Add
+
+Path: /nodes/pve-martinez
+User: ejemplo1-lectura
+Rol: Aulalectura
+Importante quitar el propagate para que no adquiera mas permisos de lo debido
+
+(Captura en evidencias 3-3.3 Rol asignado a ejemplo1-lectura.png.png)
+
+Para crear los usuarios por terminal el comando principal es:
+
+Crear usuario sin contraseña:
+
+- pveum user add demo2-lectura@pve --comment "segundo usuario"
+
+Asignar contraseñ a demo2-lectura:
+- pveum passwd de2-lectura
+
+Para crear y administrar los permisos y roles del usuario:
+
+Crear rol:
+- pveum rol add aulalectura2 --privs "Sys.Audit"
+
+Asignar rol:
+- pveum acl modift /nodes/pve-martinez -users demo2-lectura@pve --roles aulalectura2 --propagate0
+
+Una vez creado y asigando los roles para comprobar que se han aplicado bien:
+
+Comprobar rol y permisos de demo2-lectura:
+- pveum user permissions demo2-lectura --path /nodes/pve-martinez
+
+(Captura de pantalla con proceso en 3-3.4 Creacion de usuario y administracion de permisos terminal.png)
 
 ## Evidencias
 Captura de proxmox funcionando y configuracion en evidencias-03-Intalacion-Proxmox.
